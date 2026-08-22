@@ -1,0 +1,102 @@
+.sales-layout {
+    display: grid;
+    grid-template-columns: 4fr 7fr;
+    gap: var(--spacing-lg);
+    align-items: start;
+  }
+  
+  .form-panel-card, .table-panel-card {
+    background-color: var(--surface-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-card);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-flat);
+  }
+  
+  .form-panel-card h2, .table-panel-card h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+    color: var(--text-core);
+  }
+  
+  .sales-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .sales-form input, .sales-form select {
+    padding: 10px 12px;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-btn);
+    outline: none;
+    font-size: 14px;
+    width: 100%;
+    color: var(--text-core);
+    background-color: var(--surface-card);
+  }
+  
+  .sales-form input:focus, .sales-form select:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  }
+  
+  .input-err {
+    font-size: 11px;
+    color: var(--error-color);
+    margin-top: 4px;
+    display: block;
+  }
+  
+  .table-overflow-wrapper {
+    overflow-x: auto;
+    width: 100%;
+  }
+  
+  .sales-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 14px;
+    min-width: 500px;
+  }
+  
+  .sales-table th, .sales-table td {
+    padding: 12px;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  
+  .sales-table th {
+    background-color: var(--surface-main);
+    color: var(--text-muted);
+    font-weight: 600;
+  }
+  
+
+  @media (max-width: 950px) {
+    .sales-layout {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+  }
+  
+  @media (max-width: 450px) {
+    .form-panel-card, .table-panel-card {
+      padding: 16px 12px;
+    }
+  
+    .form-panel-card h2, .table-panel-card h2 {
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+  
+    .sales-table {
+      font-size: 12px;
+    }
+    
+    .sales-table th, .sales-table td {
+      padding: 8px;
+    }
+  }

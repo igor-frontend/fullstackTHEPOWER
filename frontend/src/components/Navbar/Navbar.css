@@ -1,0 +1,81 @@
+.navbar-enterprise {
+    height: 72px;
+    background-color: var(--primary-brand);
+    border-bottom: 1px solid var(--border-subtle);
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow-flat);
+  }
+  
+  .navbar-container-fluid {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-left-block, .nav-right-block {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  
+  .nav-logo-btn {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 800;
+    cursor: pointer;
+    letter-spacing: -0.02em;
+    padding: 0;
+    margin-right: 16px;
+  }
+  
+  .nav-link-btn {
+    background: none;
+    border: none;
+    color: #94a3b8;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    padding: 8px 0;
+  }
+  
+  .nav-link-btn:hover {
+    color: #ffffff;
+  }
+  
+  .user-profile-badge {
+    color: #cbd5e1;
+    font-size: 13px;
+    font-weight: 500;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 6px 12px;
+    border-radius: 20px;
+  }
+  
+  .btn-logout-nav {
+    background: transparent;
+    border: 1px solid #fca5a5;
+    color: #f87171;
+    padding: 6px 14px;
+    font-size: 13px;
+  }
+  
+  .btn-logout-nav:hover {
+    background-color: rgba(248, 113, 113, 0.1);
+  }
+  
+  @media (max-width: 450px) {
+    .nav-link-btn {
+      display: none;
+    }
+  }
+  
