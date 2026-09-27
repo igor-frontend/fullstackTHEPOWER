@@ -62,3 +62,7 @@ Para probar de forma exitosa el formulario del panel de **Operaciones Comerciale
    * **VIN**: Pega el código de 17 caracteres que acabas de copiar de la Home (asegúrate de que no tenga espacios adicionales).
    * **Código o Nombre del Cliente**: El buscador del backend acepta de forma tolerante tanto el DNI como el nombre propio del comprador. Escribe el nombre de cualquiera de las personas que ya aparecen en tu tabla (ej: `Sergio Ramírez` o `Carolina Martínez`).
 3. **Procesamiento de datos**: Haz clic en **Cerrar Venta**. El sistema emparejará los `ObjectIds` en MongoDB Atlas, registrará la fila en tiempo real en la tabla inferior y modificará automáticamente el estado del vehículo de **"Disponible"** a **"Vendido"** en el catálogo de la Home.
+
+
+## IMPORTANTE:
+Para probar el panel de operaciones comerciales y las rutas protegidas del Full Stack, podéis iniciar sesión con el usuario Administrador del sistema: admin@concesionario.com y contraseña adminpassword.

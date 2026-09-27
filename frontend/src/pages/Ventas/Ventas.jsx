@@ -1,4 +1,3 @@
-
 import { useRef, useState, useContext } from "react";
 import useFetch from "../../hooks/useFetch";
 import useFormValidation from "../../hooks/useFormValidation";
@@ -45,7 +44,8 @@ const Ventas = () => {
                     clienteId: clienteRef.current.value,
                     metodoPago: pagoRef.current.value,
                     fechaVenta: new Date().toLocaleDateString("es-ES"),
-                    asesorComercial: user.username
+                    // CORRECCIÓN SOLICITADA: Uso estricto de optional chaining y fallback preventivo ante valores null/undefined
+                    asesorComercial: user?.username || "Anónimo"
                 })
             });
 
@@ -95,7 +95,7 @@ const Ventas = () => {
                     </form>
                 </section>
                 <section className="table-panel-card">
-                    <h2>Historial de Transacciones Cruzadas ({ventas.length})</h2>
+                    <h2>Historial de Transacciones Cruzadas ({ventas ? ventas.length : 0})</h2>
                     <div className="table-overflow-wrapper">
                         <table className="sales-table">
                             <thead>
@@ -108,7 +108,7 @@ const Ventas = () => {
                                 </tr>
                             </thead>
                             <tbody>
-                                {ventas.map(v => (
+                                {ventas && ventas.map(v => (
                                     <tr key={v._id}>
                                         <td><strong>{v.idVenta}</strong></td>
                                         <td>{v.vehiculo?.marca} {v.vehiculo?.modelo} <br/><small>{v.vehiculo?.vin}</small></td>

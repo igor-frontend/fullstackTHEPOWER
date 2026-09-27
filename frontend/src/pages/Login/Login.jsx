@@ -36,6 +36,7 @@ const Login = () => {
 
             const data = await response.json();
             if (!response.ok) throw new Error(data.message || "Fallo en la autenticación");
+            
             loginUser(data.user, data.token);
             navigate("/ventas");
         } catch (err) {
